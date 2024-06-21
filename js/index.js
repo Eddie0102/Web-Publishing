@@ -1,6 +1,3 @@
-// alert("text");
-
-
 window.onload = function () {
     var elm = ".box";
     $(elm).each(function (index) {
@@ -43,3 +40,4 @@ window.onload = function () {
         });
     });
 }
+
