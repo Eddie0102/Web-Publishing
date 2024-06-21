@@ -1,5 +1,6 @@
 window.onload = function () {
     var elm = ".box";
+    let btnValue = 0;
     $(elm).each(function (index) {
         // 개별적으로 Wheel 이벤트 적용
         $(this).on("mousewheel DOMMouseScroll", function (e) {
@@ -19,6 +20,16 @@ window.onload = function () {
                 if ($(elmSelecter).next() != undefined) {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
+
+                        
+                      
+                        // if(delta <= 0 && delta < 5){
+                        //     btnValue += delta;
+                        // }else{
+                        //     btnValue = btnValue;
+                        // }
+                       
+                        console.log(btnValue);
                     }catch(e){}
                 }
             // 마우스휠을 아래에서 위로
@@ -26,6 +37,8 @@ window.onload = function () {
                 if ($(elmSelecter).prev() != undefined) {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
+                        btnValue += delta;
+                        console.log(btnValue);
                     }catch(e){}
                 }
             }
@@ -41,3 +54,19 @@ window.onload = function () {
     });
 }
 
+    
+const article = document.querySelectorAll("article");
+const naviBtn = document.querySelectorAll("li>button");
+const normalColor = "white";
+const selectedColor = "#ccc";
+
+
+for (let i = 0; i < naviBtn.length; i++) {
+    naviBtn[i].addEventListener("click", () => {
+      for (let j = 0; j < naviBtn.length; j++) {
+        naviBtn[j].style.backgroundColor = normalColor;
+      }
+      article[i].scrollIntoView({ behavior: "smooth" });
+      naviBtn[i].style.backgroundColor = selectedColor;
+    });
+  }
