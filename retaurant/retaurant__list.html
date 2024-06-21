@@ -11,6 +11,9 @@
     <script defer src="../js/index.js"></script>
     <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
     <script src="./restjs/rest.js"></script>
+    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 
 <body>
@@ -29,31 +32,57 @@
             </nav>
         </header>
         <main>
+           
+            <div id="map">
+                <h2><i class="fa-solid fa-magnifying-glass" id="umm"></i></h2>
+                <input type="text" id="address" placeholder="  주소를 입력하세요">
+                <button id="searchButton"></button>
+            </div>
             <div id="mainBox">
+               
+
                 <div id="delivery">
                     <h2>가게배달<img src="./images/baedalicon.jpg" alt="배달"></h2>
                     <ul>
-                        <li><div class="category"><a href="#"><img src="./images/for1.png" alt=""></a></div></li>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/1인분.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/족발.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/돈까스.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/고기구이.jpg" alt=""></a></div></li>
                     </ul>
                     <ul>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/피자.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/탕.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/양식.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/중식.jpg" alt=""></a></div></li>
                     </ul>
                     <ul>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
-                        <li><div class="category"></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/아시안.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/치킨.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/백반.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/패스트푸드.jpg" alt=""></a></div></li>
                     </ul>
 
                 </div>
                 <div id="pickup">
                     <h2>포장하기</h2>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/1인분.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/족발.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/돈까스.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/고기구이.jpg" alt=""></a></div></li>
+                    </ul>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/피자.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/탕.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/양식.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/중식.jpg" alt=""></a></div></li>
+                    </ul>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/아시안.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/치킨.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/백반.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/패스트푸드.jpg" alt=""></a></div></li>
+                    </ul>
                 </div>
             </div>
         </main>
