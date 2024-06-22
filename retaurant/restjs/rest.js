@@ -1,27 +1,27 @@
 // // alert("test");
 
-// function initGeocoder() {
-//     var map = new naver.maps.Map('map');
-//     var geocoder = new naver.maps.Service.Geocoder();
+function initGeocoder() {
+    var map = new naver.maps.Map('map');
+    var geocoder = new naver.maps.Service.Geocoder();
 
-//     $('#address').on('keydown', function(e) {
-//         if (e.which === 13) { // Enter Key
-//             geocoder.addressSearch($('#address').val(), function(status, result) {
-//                 if (status === naver.maps.Service.Status.ERROR) {
-//                     if (!result) return alert('Something Wrong!');
-//                 }
+    $('#address').on('keydown', function(e) {
+        if (e.which === 13) { // Enter Key
+            geocoder.addressSearch($('#address').val(), function(status, result) {
+                if (status === naver.maps.Service.Status.ERROR) {
+                    if (!result) return alert('Something Wrong!');
+                }
 
-//                 var myaddr = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
-//                 map.setCenter(myaddr);
+                var myaddr = new naver.maps.Point(result.items[0].point.x, result.items[0].point.y);
+                map.setCenter(myaddr);
 
-//                 var marker = new naver.maps.Marker({
-//                   position: myaddr,
-//                   map: map
-//                 });
-//             });
-//         }
-//     });
-// }
+                var marker = new naver.maps.Marker({
+                  position: myaddr,
+                  map: map
+                });
+            });
+        }
+    });
+}
 
 // // 페이지가 로드되면, 검색창을 초기화합니다.
 // $(window).on('load', initGeocoder);
