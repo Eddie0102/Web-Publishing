@@ -17,7 +17,7 @@
 
 header {
     background-color: rgb(42, 193, 188);
-    height: 100px;
+    height: 75px;
     display: flex;
     flex-direction: row;
 
@@ -35,13 +35,13 @@ header {
 }
 
 #nav_logo {
-    line-height: 100px;
+    line-height: 75px;
     margin-left: 80px;
 }
 
 #nav_logo a {
     color: white;
-    font-size: 40px;
+    font-size: 33px;
 }
 
 #nav_logo a:hover {
@@ -49,7 +49,7 @@ header {
 }
 
 #nav_menu {
-    line-height: 100px;
+    line-height: 75px;
     position: absolute;
     right: 30px;
     margin-right: 30px;
@@ -63,7 +63,7 @@ header {
 
 #nav_menu ul li {
     padding-right: 50px;
-    font-size: 30px;
+    font-size: 23px;
 }
 
 #nav_menu ul li a {
@@ -75,6 +75,39 @@ header {
 }
 
 /* main - pc */
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    height: 70px;
+    position: relative;
+    top: 50px;
+    background-color:  rgb(42, 193, 188);
+    width: 50%;
+    border-radius: 50px;
+    margin: 0 auto;
+
+}
+
+#map #umm{
+    margin-right: 20px;
+}
+#address {
+    /* display: flex;
+    justify-content: center;
+    align-items:flex-end; */
+    width: 300px;
+    height: 24px;
+    border-radius: 50px;
+    border: 3px solid white;
+}
+#searchButton{
+    margin-left: 20px;
+    width: 40px;
+    height: 30px;
+   
+}
 main #mainBox {
     width: 100%;
     height: 900px;
@@ -82,9 +115,12 @@ main #mainBox {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* margin-top: -50px; */
 }
 
-#delivery,#pickup{
+
+#delivery,
+#pickup {
     border: 2px solid black;
     border-radius: 30px;
     width: 40%;
@@ -128,27 +164,54 @@ main #mainBox {
     /* margin-top: 10px; */
     font-size: 36px;
     font-weight: 600;
+    margin: 0 auto;
 }
-#delivery ul{
+
+#delivery ul {
     display: flex;
     justify-content: space-evenly;
     margin: 50px auto;
     align-items: center;
 
 }
+
+#pickup ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px auto;
+    align-items: center;
+
+}
+
 .category {
     width: 100px;
     height: 100px;
-    border: 1px solid black ;
+    border: 2px solid black;
     overflow: hidden;
-    border-radius: 100%;
+    border-radius: 30px;
+    padding: 5px;
 }
-/* .category:hover{
-    width: 101px;
-    height: 101px;
-    animation: whenover 0.1s ease-out;
 
-} */
+
+.category:hover {
+    width: 105px;
+    height: 105px;
+    animation: whenover2 0.1s ease-out;
+
+}
+
+@keyframes whenover2 {
+    from {
+        width: 100px;
+        height: 100px;
+    }
+
+    to {
+        width: 105px;
+        height: 105px;
+
+    }
+}
 
 
 
