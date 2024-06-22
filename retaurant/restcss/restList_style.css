@@ -74,7 +74,35 @@ header {
     color: black;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* main - pc */
+main #adScreen {
+    width: 100%;
+    height: 240px;
+    border-bottom: 1px solid black;
+    display: flex;
+    background-color: rgb(91, 209, 205);
+    justify-content:space-around;
+
+}
+
+main #adScreen a .adver {
+    border-radius: 10px;
+}
+
 #map {
     display: flex;
     justify-content: center;
@@ -212,6 +240,12 @@ main #mainBox {
 
     }
 }
+
+
+
+
+
+
 
 
 
