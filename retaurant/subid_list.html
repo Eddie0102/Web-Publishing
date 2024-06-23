@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식점 목록</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./restcss/dinerList_style.css">
+    <script defer src="../js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
+    <script src="../restjs/rest.js"></script>
+    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>"
+        defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="nav_logo">
+                <a href="#">배달의 민족</a>
+            </div>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">주문하기</a></li>
+                    <li><a href="#">주문내역</a></li>
+                    <li><a href="#">my 배민</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="secondHead">
+                <ul>
+                    <li><a href="#">족발/보쌈</a></li>
+                    <li><a href="#">돈까스/회/일식</a></li>
+                    <li><a href="#">고기/구이</a></li>
+                    <li><a href="#">피자</a></li>
+                    <li><a href="#">찜/탕/찌개</a></li>
+                    <li><a href="#">양식</a></li>
+                    <li><a href="#">중식</a></li>
+                    <li><a href="#">아시안</a></li>
+                    <li><a href="#">치킨</a></li>
+                    <li><a href="#">백반/죽/국수</a></li>
+                    <li><a href="#">패스트푸드</a></li>
+                </ul>
+            </div>
+     
+            <div id="dinerList" style="font-family: 고딕;">
+                <div id="dinerListbox_left">
+                    <div class="dinerBox" id="box1">
+                        <img src="./images/subid1.jpg" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>도야족발보쌈 용산본점</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>4.9(100+) </h5> 매일 엄선된 품질의 '국내산 족발'<li>
+                                <li><i class="fa-regular fa-clock"></i>35~51분 <span id="tip">배달팁</span> 1,900~3,900원</li> 
+                                <li><span id="tip">최소주문</span> 3,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dinerBox">
+                        <img src="./images/subid1.jpg" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>도야족발보쌈 용산본점</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>4.9(100+) </h5> 매일 엄선된 품질의 '국내산 족발'<li>
+                                <li><i class="fa-regular fa-clock"></i>35~51분 <span id="tip">배달팁</span> 1,900~3,900원</li> 
+                                <li><span id="tip">최소주문</span> 3,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dinerBox">
+                        <img src="./images/subid1.jpg" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>도야족발보쌈 용산본점</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>4.9(100+) </h5> 매일 엄선된 품질의 '국내산 족발'<li>
+                                <li><i class="fa-regular fa-clock"></i>35~51분 <span id="tip">배달팁</span> 1,900~3,900원</li> 
+                                <li><span id="tip">최소주문</span> 3,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dinerBox">
+                        <img src="./images/subid1.jpg" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>도야족발보쌈 용산본점</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>4.9(100+) </h5> 매일 엄선된 품질의 '국내산 족발'<li>
+                                <li><i class="fa-regular fa-clock"></i>35~51분 <span id="tip">배달팁</span> 1,900~3,900원</li> 
+                                <li><span id="tip">최소주문</span> 3,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dinerBox" id="box5">
+                        <img src="./images/subid1.jpg" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>도야족발보쌈 용산본점</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>4.9(100+) </h5> 매일 엄선된 품질의 '국내산 족발'<li>
+                                <li><i class="fa-regular fa-clock"></i>35~51분 <span id="tip">배달팁</span> 1,900~3,900원</li> 
+                                <li><span id="tip">최소주문</span> 3,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div id="dinerListbox_right">
+                    <div class="dinerBox" id="box1">
+                        <img src="./images/subid2.jpg" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>망원꽃돼지</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>4.9(100+) </h5> 1인 꽃돼지족발+메밀막국수 세트..<li>
+                                <li><i class="fa-regular fa-clock"></i>40~55분 <span id="tip">배달팁</span> 1,500~3,400원</li> 
+                                <li><span id="tip">최소주문</span> 20,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dinerBox">
+                        <img src="./images/subid3.png" alt="" class="dinersmallPic">
+                        <nav id="info">
+                            <ul>
+                                <h4>귀한족발 홍대서교점</h4>
+                                <li><h5><i class="fa-solid fa-star"></i>5.0(100+) </h5>[]배달비무료 귀한 족발 中 + 막국수..<li>
+                                <li><i class="fa-regular fa-clock"></i>30~45분 <span id="tip">배달팁</span> 무료</li> 
+                                <li><span id="tip">최소주문</span> 10,000원 <span id="takeout">포장가능</span></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dinerBox">
+
+                    </div>
+                    <div class="dinerBox">
+
+                    </div>
+                    <div class="dinerBox" id="box5">
+
+                    </div>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <hr>
+            <div id="footer_box">
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">우아한형제들</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민외식업광장</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민커넥트</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_rest">
+                    <li class="footmessage"><a href="#">오늘도 당신에게<br>행복을 배달중</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                    <ul id="social">
+                        <li><a href="https://www.facebook.com/smartbaedal/?locale=ko_KR" id="facebook"><i
+                                    class="fa-brands fa-facebook"></a></i></li>
+                        <li><a href="https://www.instagram.com/baemin_official/?hl=ko" id="instagram"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC_q3OgvzbVrHhII7N9Uetfw" id="youtube"><i
+                                    class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
