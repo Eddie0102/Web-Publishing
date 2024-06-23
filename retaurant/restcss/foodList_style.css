@@ -143,6 +143,7 @@ main #mainBox {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: light;
     /* margin-top: -50px; */
 }
 
