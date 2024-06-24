@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식점 목록</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./restcss/foodList_style.css">
+    <script defer src="../js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
+    <script src="./restjs/rest.js"></script>
+    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="nav_logo">
+                <a href="#">배달의 민족</a>
+            </div>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="../retaurant/restaurant_list/diner_list.html">주문하기</a></li>
+                    <li><a href="#">주문내역</a></li>
+                    <li><a href="#">my 배민</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+           
+            <!-- <div id="map">
+                <h2><i class="fa-solid fa-magnifying-glass" id="umm"></i></h2>
+                <input type="text" id="address" placeholder="  ">
+                
+            </div> -->
+            <div id="mainBox">
+               
+
+                <div id="delivery">
+                    <h2>가게배달<img src="./images/baedalicon.jpg" alt="배달"></h2>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/forone.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/subid.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/kats.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/beef.jpg" alt=""></a></div></li>
+                    </ul>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/pizza.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/soup.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/pasta.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/china.jpg" alt=""></a></div></li>
+                    </ul>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/asian.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/chicken.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/rice.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/fastfood.jpg" alt=""></a></div></li>
+                    </ul>
+
+                </div>
+                <div id="pickup">
+                    <h2>포장하기</h2>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/night.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/subid.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/kats.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/beef.jpg" alt=""></a></div></li>
+                    </ul>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/cafe.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/soup.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/pasta.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/china.jpg" alt=""></a></div></li>
+                    </ul>
+                    <ul>
+                        <li><div class="category"><a href="#"><img src="./images/asian.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/chicken.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/pizza.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="#"><img src="./images/fastfood.jpg" alt=""></a></div></li>
+                    </ul>
+
+                </div>
+            </div>
+        </main>
+        <footer>
+            <hr>
+            <div id="footer_box">
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">우아한형제들</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민외식업광장</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민커넥트</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_rest">
+                    <li class="footmessage"><a href="#">오늘도 당신에게<br>행복을 배달중</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                    <ul id="social">
+                        <li><a href="https://www.facebook.com/smartbaedal/?locale=ko_KR" id="facebook"><i class="fa-brands fa-facebook"></a></i></li>
+                        <li><a href="https://www.instagram.com/baemin_official/?hl=ko" id="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC_q3OgvzbVrHhII7N9Uetfw" id="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
