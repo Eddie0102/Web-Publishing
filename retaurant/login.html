@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인 페이지</title>
-    <link rel="stylesheet" href="restcss/restList_style.css">
+    <link rel="stylesheet" href="restcss/dinerList_style.css">
     <style>
         #wrapper {
             width: 320px;
@@ -132,7 +132,7 @@
             width: 100%;
             margin: 32px 0;
             height: 50px;
-            background: #2ac1bc;
+            background: rgb(42, 193, 188);
             border-radius: 4px;
             color: #fff;
             font-family: "";
@@ -152,12 +152,19 @@
             justify-content: center;
         }
 
-        .sns_login_title > span {
+        .sns_login_title>span {
             font-size: 14px;
             font-weight: 400;
             line-height: 150%;
             color: #7e8082;
-            margin: 0 15px;
+            margin: 15px 15px 0 ;
+        }
+        .sns_login_title>span>a {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 150%;
+            color: #333;
+            margin: 15px 15px 0 ;
         }
 
         .sns_login_title::after,
@@ -169,15 +176,24 @@
             flex-grow: 1;
         }
 
+        #signUp{
+            margin: 25px 0 0 0 ;
+            color: #181a1c;
+            text-align: center;
+        }
+
+        #signUp span{
+            color: rgba(43, 43, 255, 0.712);
+        }
+
         .sns_login_list{
             display: flex;
-            margin: 28px 0 0;
+            margin: 0 0 14px 0;
             padding: 0;
             width: 100%;
             list-style: none;
             text-align: center;
             justify-content: center;
-
         }
         .sns_login_list > li {
             margin-right: 24px;
@@ -185,7 +201,7 @@
 
         .sns_login_list > li:last-child {
             margin-right: 0;
-        }
+}
 
         .btn_sns_login{
             background-color: #fff;
@@ -196,7 +212,7 @@
         }
 
         .icon_sns{
-            display: block;
+            display: flex;
             width: 54px;
             height: 54px;
             background-position: center center;
@@ -204,6 +220,9 @@
             background-repeat: no-repeat;
         }
 
+        .icon_sns:hover{
+            cursor:pointer;
+        }
         .icon_sns.icon_kakao{
             background-image: url("images/kakaotalkLogo.png");
         }
@@ -215,6 +234,10 @@
         }
         .icon_sns.icon_apple{
             background-image: url("images/appleLogo.png");
+        }
+
+        #signUp_idPwd>li{
+            display: inline-block;
         }
     </style>
 </head>
@@ -233,7 +256,7 @@
                 </ul>
             </nav>
         </header>
-        <!--  -->
+        <!-- 로그인 페이지 -->
         <main>
             <div id="wrapper">
                 <img class="title_logo" src="../images/logoBlack.png" alt="로고이미지">
@@ -250,7 +273,7 @@
                         <input type="password" id="input_login_pwd" placeholder>
                         <i class="icon_cancle"></i>
                     </label>
-                    <button id="button_login" class="login_button" disabled="disabled">로그인</button>
+                    <button id="button_login" class="login_button" disabled>로그인</button>
                 </form>
                 <div class="sns_logoin_container">
                     <strong class="sns_login_title">
@@ -259,26 +282,36 @@
                     <ul class="sns_login_list">
                         <li>
                             <button class="btn_sns_login btn_kakao_login" aria-label="카카오 로그인"></button>
-                            <i class="icon_sns icon_kakao"></i>
+                            <a target="_blank" href="https://baemin.com/kakao-login?code=HGtCNaAQI4KINfgoyloJuSymL7MZQrZ0BGkZvNr7JV0uuz2wU90h-QAAAAQKPXNNAAABkElDx40e0jm_MNo9Pw&state=%252F">
+                                <i class="icon_sns icon_kakao"></i>
+                            </a>
                         </li>
                         <li>
                             <button class="btn_sns_login btn_naver_login" aria-label="네이버 로그인"></button>
-                            <i class="icon_sns icon_naver"></i>
+                            <a target="_blank" href="https://nid.naver.com/oauth2.0/authorize?response_type=token&client_id=gIarItKH0yF83oDoqFjQ&state=5e87f1a3-e825-4d43-bb41-17effa8ddbf7&redirect_uri=https%3A%2F%2Fbaemin.com%2Fnaver-login%3Fredirect%3D%2F&version=js-2.0.0">
+                                <i class="icon_sns icon_naver"></i>
+                            </a>
                         </li>
                         <li>
                             <button class="btn_sns_login btn_facebook_login" aria-label="페이스북 로그인"></button>
-                            <i class="icon_sns icon_facebook"></i>
+                            <a target="_blank" href="https://www.facebook.com/login.php?skip_api_login=1&api_key=1431086087103015&kid_directed_site=0&app_id=1431086087103015&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fv2.8%2Fdialog%2Foauth%3Fapp_id%3D1431086087103015%26cbt%3D1719216028115%26channel_url%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Dfe5c0a3e6138f0fb6%2526domain%253Dbaemin.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fbaemin.com%25252Ffbd2320f3313b01dc%2526relation%253Dopener%26client_id%3D1431086087103015%26display%3Dpopup%26domain%3Dbaemin.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fbaemin.com%252Flogin%253FredirectUrl%253D%252F%26locale%3Den_US%26logger_id%3Df8b20e6d448d1cedb%26origin%3D1%26redirect_uri%3Dhttps%253A%252F%252Fstaticxx.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df623b36625cd6d169%2526domain%253Dbaemin.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fbaemin.com%25252Ffbd2320f3313b01dc%2526relation%253Dopener%2526frame%253Df9073bc926f0cfc68%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%26sdk%3Djoey%26version%3Dv2.8%26ret%3Dlogin%26fbapp_pres%3D0%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df623b36625cd6d169%26domain%3Dbaemin.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fbaemin.com%252Ffbd2320f3313b01dc%26relation%3Dopener%26frame%3Df9073bc926f0cfc68%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=popup&locale=ko_KR&pl_dbl=0">
+                                <i class="icon_sns icon_facebook"></i>
+                            </a>
                         </li>
                         <li>
                             <button class="btn_sns_login btn_apple_login" aria-label="애플 로그인"></button>
-                            <i class="icon_sns icon_apple"></i>
+                            <a target="_blank" href="https://appleid.apple.com/auth/authorize?client_id=com.jawebs.baedal.siwa&redirect_uri=https%3A%2F%2Fwww.baemin.com%2Fapple-login&response_type=code%20id_token&state=%2F&scope=email&response_mode=form_post&frame_id=eeac5c58-9a4f-4ce6-80dd-c91bfd95d0f8&m=11&v=1.5.5">
+                                <i class="icon_sns icon_apple"></i>
+                            </a>
                         </li>
                     </ul>
-                    
+                    <p id="signUp">
+                        계정이 없으신가요? <a href="#"><span>회원 가입</span></a>
+                    </p>
                 </div>
             </div>
         </main>
-        <!--  -->
+        <!-- footer -->
         <footer>
             <hr>
             <div id="footer_box">
@@ -344,6 +377,15 @@
                 // 페이지 로드 시 초기 상태를 설정합니다.
                 checkInputValue(idInput, idContainer);
                 checkInputValue(pwdInput, pwdContainer);
+            });
+
+
+            document.getElementById("login_form").addEventListener("input", function(){
+                let username = document.getElementById("input_login_id").value;
+                let password = document.getElementById("input_login_pwd").value;
+                let loginButton = document.querySelector(".login_button");
+
+                loginButton.disabled = username === "" || password === "";
             });
         </script>
     </div>
