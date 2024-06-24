@@ -15,19 +15,25 @@ window.onload = function () {
                 delta = -event.detail / 3;
             var moveTop = $(window).scrollTop();
             var elmSelecter = $(elm).eq(index);
+            let rollScreen = $('.box');
+            let wheelBtn = $('.circle');
             // 마우스휠을 위에서 아래로
             if (delta < 0) {
                 if ($(elmSelecter).next() != undefined) {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
+                        // if  (delta =  1){
+                        //     btnValue++;
+                        //     $('.circle').on('scroll', function(){
+                        //         rollScree
+                        //     })
 
-                        
+                            // for( let i = 1 ; i > rollScreen.length; i++){
+                            //     delta = btnValue;
+
+                        // }                        
                       
-                        // if(delta <= 0 && delta < 5){
-                        //     btnValue += delta;
-                        // }else{
-                        //     btnValue = btnValue;
-                        // }
+            
                        
                         console.log(btnValue);
                     }catch(e){}
