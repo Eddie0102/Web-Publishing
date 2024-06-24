@@ -182,9 +182,11 @@ main #dinerList #dinerListbox_right {
     color: darkgray;
 }
 #takeout{
+    font-size: 13px;
     background-color: lightgray;
     border-radius: 3px;
     padding: 1px;
+    margin-right: 1px;
 }
 
 
