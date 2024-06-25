@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +7,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../retaurant/restcss/detail_style.css">
-    <script defer src="../js/index.js"></script>
+    <!-- <script defer src="../js/index.js"></script> -->
     <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
     <script src="./restjs/rest.js"></script>
     <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>"
         defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 </head>
 
 <body>
@@ -57,7 +55,7 @@
 
                         <div id="infoHeadcontent">
                             <ul>
-                                <h4 id="dinerName">교촌치킨 신촌점 <i class="fa-regular fa-heart"></i></h4>
+                                <h4 id="dinerName">교촌치킨 신촌점 <i id="heartIcon" class="fa-regular fa-heart"></i></h4>
                                 <li><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><span id="score">5.0(100+)</span></li>
@@ -76,76 +74,47 @@
                             </tr>
                         </table>
                         <div id="menuTable">
-                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
-                                <img src="./images/menuPic1.jpg" alt="" class="menuPic">
+                            <div class="menu-item" data-name="허니콤보" data-price="23000"  data-image="./images/menuPic1.jpg">
+                                <img src="./images/menuPic1.jpg" alt="허니콤보" class="menuPic">
                                 <div id="menuName">
-                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
-                                    23,000원
-                                    <br>
-                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                    <p><i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보</p>
+                                    <p> 23,000원</p>
+                                    <p>달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴</p>
                                 </div>
-                               
                             </div>
-                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
-                                <img src="./images/menuPic2.jpg" alt="" class="menuPic">
+                            <div class="menu-item" data-name="레드콤보" data-price="22000"  data-image="./images/menuPic2.jpg">
+                                <img src="./images/menuPic2.jpg" alt="레드콤보" class="menuPic">
                                 <div id="menuName">
-                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
-                                    23,000원
-                                    <br>
-                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                    <p><i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>레드콤보</p>
+                                    <p> 23,000원</p>
+                                    <p>달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴</p>
                                 </div>
-                              
                             </div>
-                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
-                                <img src="./images/menuPic3.jpg" alt="" class="menuPic">
-
+                            <div class="menu-item" data-name="오리지날" data-price="21000"  data-image="./images/menuPic3.jpg">
+                                <img src="./images/menuPic3.jpg" alt="레드콤보" class="menuPic">
                                 <div id="menuName">
-                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
-                                    23,000원
-                                    <br>
-                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                    <p><i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>오리지날</p>
+                                    <p> 23,000원</p>
+                                    <p>달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴</p>
                                 </div>
-                              
                             </div>
-                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
-                                <img src="./images/menuPic4.jpg" alt="" class="menuPic">
+                            <div class="menu-item" data-name="감자튀김" data-price="15000"  data-image="./images/menuPic4.jpg">
+                                <img src="./images/menuPic4.jpg" alt="감자튀김" class="menuPic">
                                 <div id="menuName">
-                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
-                                    23,000원
-                                    <br>
-                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                    <p><i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>감자튀김</p>
+                                    <p> 23,000원</p>
+                                    <p>달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴</p>
                                 </div>
-                              
                             </div>
-                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
-                                <img src="./images/menuPic1.jpg" alt="" class="menuPic">
-                                <div id="menuName">
-                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
-                                    23,000원
-                                    <br>
-                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
-                                </div>
-                               
-                            </div>
-
                         </div>
 
                     </div>
                 </div>
                 <div id="cart">
-                   <div id="cartHead">
-                    장바구니
-                   </div>
-                   <div id="cartList">
-                    
-                   </div>
+                    <h2>장바구니</h2>
+                    <div id="cartItems"></div>
                 </div>
             </div>
-
-
-
-
-
         </main>
         <footer>
             <hr>
