@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우아한형제들 따라잡기</title>
+    <script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
+    <link rel="stylesheet" href="css/index2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      #fullpage{
+    position: relative;
+}
+ul li{
+    list-style: none;
+}
+.textBox_left a{
+    text-decoration: none;
+    color:black;
+    font-size: 25px;
+    font-weight: 700;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow:clip;
+}
+section{
+    background-color: #2AC1BC;
+}
+nav{   
+    position: relative;
+    flex-flow:row nowrap ;
+    margin-top: 70px;
+}
+nav #logo img{
+    padding:0 170px;
+    margin-top: 20px;
+    margin-left:300px;
+    object-fit: contain;
+    display:flex;
+    float:none;
+    width:28%;
+    height:auto;
+    max-width: 142px;
+}
+#navbar_list{
+ position: absolute;
+ right:300px;
+ top:20px;
+ padding: 0 170px;
+}
+#navbar_list button{
+border:none;
+color:whitesmoke ;
+background-color: #2AC1BC;
+width:140px;
+height:48px;
+border-radius: 30px;
+cursor:pointer;
+font-size: 17px;
+}
+#footerBox_wrap{
+    position: relative;
+    height: 100vh;
+    padding:0 170px;
+}
+.textBox_left{
+    display: block;
+    position: absolute;
+    bottom:500px;
+    left:480px;
+}
+.textBox_right{
+    position:absolute;
+    left:970px;
+    top:160px;
+}
+.icons_sns{
+    position: absolute;
+    bottom:370px;
+    left:520px;
+}
+.textBox_bot{
+    position: absolute;
+    bottom:10px;
+    left:500px;
+}
+/* section:last-child nav{
+display:none;
+}
+ */
+ /* #navbar{
+    display:none;
+ } */
+   
+ .background_image  {
+   /* background-image: url('images/main_background.jpg'); */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    /* animation: zoom-in 1s linear forwards;
+    transition: transform 2.5s ease-in-out; */
+} 
+.bgImage{ 
+    width:100%; 
+    background-position: center;
+    position: absolute;
+    animation: zoom-in 1s linear forwards;
+    transition: transform 2.5s ease-in-out;
+    inset: 0;
+}
+@keyframes zoom-in {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.corner{
+    position: absolute;
+    right:0;
+    top:0;
+    width:173px;
+    height:226px;
+}
+
+.background_text img{
+    margin:100px;
+    width:450px;
+    position: absolute;
+    left:200px;
+    bottom:-180px;
+}
+#navwrap{
+    padding:0 170px;
+}
+
+#store_btn{
+position:absolute;
+padding:0 170px;
+bottom:270px;
+left:270px;
+/* display:flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-top: 40px; */
+}
+.btn{
+background-repeat: no-repeat;
+background-size:140px;
+background-position: center center;
+background-color: rgb(255,255,255);
+outline:none;
+border:none;
+cursor:pointer;
+width:200px;
+height:70px;
+margin-right:12px;
+padding:15px 30px;
+border-radius:100px;
+}
+.apple{
+background-image: url("../images/appstore.png");
+}
+.google{
+background-image: url("../images/google.png");
+}
+.qr{
+position: absolute;
+bottom:200px;
+right:400px;
+padding:0 170px;
+}
+
+html,
+body {
+position: relative;
+height: 100%;
+}
+
+body {
+background: #eee;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #000;
+margin: 0;
+padding: 0;
+}
+
+.swiper {
+width: 36%;
+height: 100%;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+@media screen and(min-width:1025px){
+    #navwrap{
+      width:1024px;
+      margin:0 auto;
+      padding:165px 50px 0px;  
+    }
+    #logo{
+        width:50%;
+    }
+}
+
+    </style>
+<body>
+    <nav style="position: fixed; z-index: 100; height: 100px; width: 100vw; ">
+        <div id="logo">
+            <img src="images/logo_main.png" alt="">
+        </div>
+        <div id="navbar_list">
+            <button onclick="location.href='retaurant/food_list.html'">주문하기</button>
+        </div>
+    </nav>
+ 
+    <div id="fullpage">
+     
+        <div class="section" id="navwrap">
+            <div class="background_image">
+            </div>
+            <div class="background_corner">
+                <img src="images/main_corner.png" alt="" class="corner" style=" z-index:100;">    
+            </div>
+            <div class="background_text" style="z-index: 98; position: fixed;">
+                <img src="images/bokggi_text.png" alt="">
+            </div>
+            <div id="store_btn">
+                <h4 style="color:white">앱스토어 다운로드</h4>
+               <button class="apple btn"></button>
+               <button class="google btn"></button>
+              
+            </div>
+            <div class="qr">
+                <h4 style="color:white;">qr코드 다운로드</h4>
+                <img src="images/qr.png" alt="qr코드" style=" width:min(225px,20vh);height:auto;">
+            </div>
+        <!-- <div id="scroll">
+            <img src="images/scroll.png" alt="">
+        </div> -->
+        </div>
+    
+        <div class="section"> 
+            <div class="swiper mySwiper">
+                <h1>#배민이 추천하는</h1>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="flex-direction:column ;">
+                        <img src="images/4.jpg" alt="">
+                  </div>
+        
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+        </div>
+        <div class="section">
+            <div class="swiper mySwiper">
+                <h1>#배민이 추천하는</h1>
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="flex-direction:column ;">
+                        <img src="images/4.jpg" alt="">
+                  </div>
+        
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+        </div>
+        <!-- <div class="section">Section 4</div> -->
+        <div class="section">
+            <div id="footerBox_wrap">
+                <ul class="textBox_left">
+                   <li> <a href=""><img src="images/footer1.png" alt=""></a></li>
+                   <li> <a href=""><img src="images/footer2.png" alt=""></a></li>
+                   <li> <a href=""><img src="images/footer3.png" alt=""></a></li>
+                
+                    
+                </ul>
+                <div class="icons_sns">
+                    <a href=""><img src="images/icon_blog.png" alt=""></a>
+                    <a href=""><img src="images/icon_facebook.png" alt=""></a>
+                    <a href=""><img src="images/icon_insta.png" alt=""></a>
+                    <a href=""><img src="images/icon_youtube.png" alt=""></a>
+                </div>
+            <div class="textBox_right">
+                <img src="images/footerimg.png" alt="">
+            </div>
+        <div class="textBox_bot">
+            <p>
+          (주)우아한형제들<br>
+           서울시 송파구 위례성대로 2 장은빌딩 18층<br>
+    
+            사업자번호 : 120-87-65763<br>
+            통신판매업: 서울 송파-0515<br>
+            전자 금융분쟁처리 TEL : 1600-0987 FAX:02-532-5864<br>
+            MAIL : help@woowhan.com<br>
+        </p>
+        </div>
+        </div>
+      </div>
+
+      <div id="fp-nav" class="fp-right"><ul><li><a href="#firstPage" class="active"><span class="fp-sr-only">First%20Section</span><span></span></a><div class="fp-tooltip fp-right">First Section</div></li><li><a href="#secondPage"><span class="fp-sr-only">Second%20Section</span><span></span></a><div class="fp-tooltip fp-right">Second Section</div></li><li><a href="#3rdPage"><span class="fp-sr-only">Third%20Section</span><span></span></a><div class="fp-tooltip fp-right">Third Section</div></li></ul></div>
+
+      <script>
+        new fullpage('#fullpage', {
+    // 옵션 설정
+    sectionsColor: ['#2AC1BC', 'whitesmoke','#2AC1BC','whitesmoke'],
+    anchors: ['firstPage', 'secondPage', 'thirdPage','foursPage'],
+    menu: '#menu',
+    scrollingSpeed: 800, navigation : true,
+ 
+ // 2. 네비게이션 위치 지정
+ navigationPosition : 'right',
+    
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>  
+<script>
+    var swiper = new Swiper(".mySwiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+<script src="js/scroll.js"></script>
+</body>
+</html>
