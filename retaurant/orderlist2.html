@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문내역 페이지</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./restcss/dinerList_style.css">
+    <script defer src="../js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
+    <script src="../restjs/rest.js"></script>
+    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "배달의민족 한나는 열한살";
+        }
+
+        main {
+            min-height: 1000px;
+        }
+
+        .wrapper>h2 {
+            text-align: center;
+            font-size: 40px;
+            margin: 20px auto;
+        }
+
+        .wrapper>i {
+            display: inline-block;
+            /* float: right; */
+            margin-top: 20px;
+            margin: 20px;
+        }
+
+        .wrapper>p {
+            display: block;
+            margin: 32px 0;
+            font-size: 16px;
+            line-height: 140%;
+            color: #9b9999;
+            text-align: center;
+        }
+
+        .content {
+            width: 1010px;
+            min-height: 650px;
+            /* border: 2px solid black; */
+            margin: 0px auto 20px;
+            position: relative;
+        }
+
+        .total_menu ul li {
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            margin: 2px;
+            font-size: large;
+            /* border: 2px solid #000000; */
+            font-weight: bolder;
+            margin: 20px 0;
+            margin-left: 120px;
+        }
+
+        .register {
+            border: 1px solid #333;
+            width: 80%;
+            border-collapse: collapse;
+            margin-bottom: 100px;
+            margin-left: 120px;
+        }
+
+        .tableMenu tr th {
+            border: 1px solid #444;
+            border-collapse: collapse;
+            border-right: none;
+            border-left: none;
+            padding: 30px;
+            width: 20%;
+            background-color: #eee;
+        }
+
+        .tablebb tr td {
+            border: 1px solid #444;
+            border-right: none;
+            border-left: none;
+            text-align: center;
+            /* font-family: "아리따움체"; */
+        }
+
+        .section {
+            height: 100px;
+        }
+
+        .tableMenu tr :first-child,
+        .tablebb tr> :first-child {
+            border-right: 1px solid #444;
+        }
+
+        .tableMenu tr {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .tableMenu tr .qa {
+            width: 26%;
+            padding-left: 100px;
+        }
+
+        .name {
+            display: flex;
+            line-height: 100px;
+            padding-left: 20px;
+        }
+
+        .name.name2 {
+            font-size: 1px;
+        }
+
+        .section img {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            float: left;
+            margin: 0px 40px;
+            border-radius: 20px;
+            border: 1px solid #9b9999;
+        }
+
+        .show_more {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 20px;
+            text-align: center;
+            background-color: #2AC1BC;
+            color: #FFFFFF;
+            border: 2px solid #f7f5f5;
+            border-radius: 20px;
+        }
+
+        footer {
+            position: relative;
+            width: 100%;
+            bottom: 0;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="nav_logo">
+                <a href="#">배달의 민족</a>
+            </div>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="./food_list.html">주문하기</a></li>
+                    <li><a href="#">주문내역</a></li>
+                    <li><a href="#">my 배민</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="wrapper">
+                <h2>나의 주문내역</h2>
+                <p>나의 주문내역을 확인하실 수 있습니다.<br>
+                    주문내역은 1달 후 조회 불가합니다.</p>
+                <div class="content" id="content">
+                    <div class="total_menu">
+                        <ul>
+                            <li>
+                                <p class="upTitle">
+                                    이번달 총 주문내역 : 11번
+                                </p>
+                            </li>
+                            <li>
+                                <p class="upTitle">
+                                    이번달에 쓴 총 결재금액 : 282,200원
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <table class="register">
+                        <thead class="tableMenu">
+                            <tr>
+                                <th>주문일자</th>
+                                <th colspan="2" class="qa">주문매장</th>
+                                <th>주문내용</th>
+                                <th>주문금액</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tablebb" id="order-list">
+                            <tr>
+                                <td>2024-06-25</td>
+                                <td>
+                                    <div class="section">
+                                        <img src="../retaurant/images/subid3.png" alt="">
+                                    </div>
+                                    <td>
+                                        <p>귀한족발<br> 홍대서교점</p>
+                                    </td>
+                                </td>
+                                <td>귀한족발(대)大 <br> 생과일막국수</td>
+                                <td>45,000원</td>
+                                <td>배달완료</td>
+                            </tr>
+                            <tr>
+                                <td>2024-06-23</td>
+                                <td>
+                                    <div class="section">
+                                        <img src="../retaurant/images/yoajung.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>요거트 <br>아이스크림의 정석 <br>홍대점</p>
+                                </td>
+                                <td>햇님의 입짧은<br> 먹방Set<br>3인 450g</td>
+                                <td>19,900원</td>
+                                <td>배달완료</td>
+                            </tr>
+                            <tr>
+                                <td>2024-06-21</td>
+                                <td>
+                                    <div class="section">
+                                        <img src="/images/kyochon.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>교촌치킨<br>신수점</p>
+                                </td>
+                                <td>허니콤보+<br>웨지감자</td>
+                                <td>26,000원</td>
+                                <td>배달완료</td>
+                            </tr>
+                            <tr>
+                                <td>2024-06-20</td>
+                                <td>
+                                    <div class="section">
+                                        <img src="../retaurant/images/namnam.jpg" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>냠냠크로플<br>본점</p>
+                                </td>
+                                <td>몰티져스 크로플 & <br>아이스크림 크로플</td>
+                                <td>12,000원</td>
+                                <td>배달완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <button class="show_more">더 보기</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <hr>
+            <div id="footer_box">
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">우아한형제들</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민외식업광장</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민커넥트</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_rest">
+                    <li class="footmessage"><a href="#">오늘도 당신에게<br>행복을 배달중</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                    <ul id="social">
+                        <li><a href="https://www.facebook.com/smartbaedal/?locale=ko_KR" id="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li><a href="https://www.instagram.com/baemin_official/?hl=ko" id="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC_q3OgvzbVrHhII7N9Uetfw" id="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <script>
+        $(document).ready(function () {
+            let newOrdersVisible = false;
+            let newOrders = `
+            <tr class="new-order">
+                <td>2024-06-19</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/subid4.png" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>원할머니<br>보쌈<br> 홍대역점</p>
+                </td>
+                <td>모둠보쌈 중+ <br> 직화낙지볶음도시락</td>
+                <td>61,000원</td>
+                <td>배달완료</td>
+            </tr>
+            <tr class="new-order">
+                <td>2024-06-19</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/china4.jpg" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>침착맨<br>마라탕<br>공덕점</p>
+                </td>
+                <td>1인마라탕<br>꿔바로우세트</td>
+                <td>23,900원</td>
+                <td>배달완료</td>
+            </tr>
+            <tr class="new-order">
+                <td>2024-06-15</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/horseking.jpg" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>메그네릭<br>탕후루<br>공덕점</p>
+                </td>
+                <td>메그네릭탕후루세트+<br>카페라떼</td>
+                <td>18,900원</td>
+                <td>배달완료</td>
+            </tr>
+            <tr class="new-order">
+                <td>2024-06-14</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/beef2.png" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>제육집 <br>막내아들<br>마포점</p>
+                </td>
+                <td>[2인] 제육볶음만+<br>계란후라이 2개</td>
+                <td>20,000원</td>
+                <td>배달완료</td>
+            </tr>
+            <tr class="new-order">
+                <td>2024-06-13</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/soup4.png" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>두찜<br>마포공덕점</p>
+                </td>
+                <td>불닭로제찜닭</td>
+                <td>24,800원</td>
+                <td>배달완료</td>
+            </tr>
+            <tr class="new-order">
+                <td>2024-06-12</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/fast1.png" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>맥도날드<br>공덕점</p>
+                </td>
+                <td>더블불고기버거세트+<br>맥너겟®4조각</td>
+                <td>8,700원</td>
+                <td>배달완료</td>
+            </tr>
+            <tr class="new-order">
+                <td>2024-06-09</td>
+                <td>
+                    <div class="section">
+                        <img src="../retaurant/images/kats4.png" alt="">
+                    </div>
+                </td>
+                <td>
+                    <p>돈기부여 <br>대흥점</p>
+                </td>
+                <td>정성가득 수체카츠+<br>경양식 왕 돈까스</td>
+                <td>22,000원</td>
+                <td>배달완료</td>
+            </tr>`;
+
+            $(".show_more").click(function () {
+                if (newOrdersVisible) {
+                    $(".new-order").remove();
+                    $(this).text("더 보기");
+                } else {
+                    $(".tablebb").append(newOrders);
+                    $(this).text("접기");
+                }
+                newOrdersVisible = !newOrdersVisible;
+
+                // Adjust height of content
+                let contentHeight = $("#content").outerHeight(true);
+                $("main").css("min-height", contentHeight + 50); // Adjusting for footer margin-top
+            });
+        });
+    </script>
+</body>
+
+</html>
