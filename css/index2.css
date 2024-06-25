@@ -1,0 +1,224 @@
+#fullpage{
+    position: relative;
+}
+ul li{
+    list-style: none;
+}
+.textBox_left a{
+    text-decoration: none;
+    color:black;
+    font-size: 25px;
+    font-weight: 700;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow:clip;
+}
+section{
+    background-color: #2AC1BC;
+}
+nav{   
+    position: relative;
+    flex-flow:row nowrap ;
+    margin-top: 70px;
+}
+nav #logo img{
+    padding:0 170px;
+    margin-top: 20px;
+    margin-left:300px;
+    object-fit: contain;
+    display:flex;
+    float:none;
+    width:28%;
+    height:auto;
+    max-width: 142px;
+}
+#navbar_list{
+ position: absolute;
+ right:300px;
+ top:20px;
+ padding: 0 170px;
+}
+#navbar_list button{
+border:none;
+color:whitesmoke ;
+background-color: #2AC1BC;
+width:140px;
+height:48px;
+border-radius: 30px;
+cursor:pointer;
+font-size: 17px;
+}
+#footerBox_wrap{
+    position: relative;
+    height: 100vh;
+    padding:0 170px;
+}
+.textBox_left{
+    display: block;
+    position: absolute;
+    bottom:500px;
+    left:480px;
+}
+.textBox_right{
+    position:absolute;
+    left:970px;
+    top:160px;
+}
+.icons_sns{
+    position: absolute;
+    bottom:370px;
+    left:520px;
+}
+.textBox_bot{
+    position: absolute;
+    bottom:10px;
+    left:500px;
+}
+/* section:last-child nav{
+display:none;
+}
+ */
+ /* #navbar{
+    display:none;
+ } */
+   
+ .background_image  {
+   /* background-image: url('images/main_background.jpg'); */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    /* animation: zoom-in 1s linear forwards;
+    transition: transform 2.5s ease-in-out; */
+} 
+.bgImage{ 
+    width:100%; 
+    background-position: center;
+    position: absolute;
+    animation: zoom-in 1s linear forwards;
+    transition: transform 2.5s ease-in-out;
+    inset: 0;
+}
+@keyframes zoom-in {
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.corner{
+    position: absolute;
+    right:0;
+    top:0;
+    width:173px;
+    height:226px;
+}
+
+.background_text img{
+    margin:100px;
+    width:450px;
+    position: absolute;
+    left:200px;
+    bottom:-180px;
+}
+#navwrap{
+    padding:0 170px;
+}
+
+#store_btn{
+position:absolute;
+padding:0 170px;
+bottom:270px;
+left:270px;
+/* display:flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-top: 40px; */
+}
+.btn{
+background-repeat: no-repeat;
+background-size:140px;
+background-position: center center;
+background-color: rgb(255,255,255);
+outline:none;
+border:none;
+cursor:pointer;
+width:200px;
+height:70px;
+margin-right:12px;
+padding:15px 30px;
+border-radius:100px;
+}
+.apple{
+background-image: url("../images/appstore.png");
+}
+.google{
+background-image: url("../images/google.png");
+}
+.qr{
+position: absolute;
+bottom:200px;
+right:400px;
+padding:0 170px;
+}
+
+html,
+body {
+position: relative;
+height: 100%;
+}
+
+body {
+background: #eee;
+font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #000;
+margin: 0;
+padding: 0;
+}
+
+.swiper {
+width: 36%;
+height: 100%;
+}
+
+.swiper-slide {
+text-align: center;
+font-size: 18px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+/* @media screen and(min-width:1025px){
+    .section{
+        width:100%;
+        height:100vh;
+    }
+    .corner{
+        width:173px;
+        height:226px;
+    }
+}
+@media screen and(min-width:675px){
+  .corner{
+    position:fixed;
+    display:flex;
+    width:109px;
+    height:142px;
+    right:0;
+    top:0;
+    opacity:1;
+    transition: opacity 0.5s ease-in-out;
+    
+  }
+} */

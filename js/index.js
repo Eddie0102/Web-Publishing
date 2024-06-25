@@ -35,7 +35,7 @@ window.onload = function () {
                       
             
                        
-                        console.log(btnValue);
+                        console.log(delta);
                     }catch(e){}
                 }
             // 마우스휠을 아래에서 위로
@@ -44,7 +44,7 @@ window.onload = function () {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
                         btnValue += delta;
-                        console.log(btnValue);
+                        console.log(delta);
                     }catch(e){}
                 }
             }
@@ -76,3 +76,15 @@ for (let i = 0; i < naviBtn.length; i++) {
       naviBtn[i].style.backgroundColor = selectedColor;
     });
   }
+
+
+  let none = document.querySelector('nav')
+
+    window.addEventListener('scroll',function(){
+        console.log(window.scrollY);
+    if(window.scrollY > 3000){
+        none.style.display = 'none';
+    }else{
+        none.style.display = 'block';
+    }
+    });
