@@ -64,11 +64,12 @@
     border-radius: 4px;
     display: block;
     height: 100%;
+    width: 100%;
     color: #181a1c;
     padding: 13.5px 40px 13.5px 11px;
     border: none;
     background: #ffffff;
-    font-size: 14px;
+    font-size: 16px;
     caret-color: #2ac1bc;
 }
 
@@ -108,7 +109,9 @@
 }
 
 .login_input_container.isTyping:focus-within > span,
-.login_input_container:focus-within > span {
+.login_input_container:focus-within > span,
+.signUp_input_container.isTyping:focus-within > span,
+.signUp_input_container:focus-within > span {
     top: -7px;
     left: 6px;
 }
@@ -117,11 +120,12 @@
 .signUp_input_container.isTyping > span {
     top: -6px;
     left: 7px;
-    transition: none;
+    transition: none; 
 }
 
-.login_input_container > .icon_cancel,
-.signUp_input_container > .icon_cancel {
+
+.login_input_container > .icon_cancle
+.signUp_input_container > .icon_cancle {
     display: none;
     width: 24px;
     height: 24px;
@@ -255,16 +259,22 @@
 /* signUp style */
 
 
-#signUpWrapper{
-    width: 1000px;
+.signUpWrapper{
+    width: 700px;
     height: 660px;
-    margin: auto;
+    margin: 0 auto;
     position: relative;
-    padding: 50px 15px;
+    padding: 25px 45px;
     box-sizing: border-box;
 }
 
-#signUpWrapper .title_logo {
+#signUpWrapper{
+    width: 1000px;
+    margin: 0 auto;
+    padding: 25px 15px;
+}
+
+.signUpWrapper .title_logo {
     display: block;
     width: 200px;
     height: 44px;
@@ -289,12 +299,22 @@
     box-sizing: border-box;
 }
 
+
 #titleStyle{
     font-family: "배달의민족 을지로체 TTF";
     font-weight: 800;
     font-size: 50px;
     color: white;
-    margin-left: 40px;
+    padding: 20px 0;
+    display: block;
     -webkit-text-stroke: 1px #2ac1bc;
 }
 
+
+#signUpWrapper #titleStyle{
+    text-align: center;
+}
+
+.title_descriptionA{
+    margin: 15px 0;
+}
