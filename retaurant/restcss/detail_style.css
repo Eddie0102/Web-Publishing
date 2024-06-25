@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+#container {
+    width: 100%;
+    /* height: 4200px; */
+    background-color: rgb(42, 193, 188);
+}
+
+#container {
+    background-color: white;
+    font-family: "배달의민족 한나는 열한살";
+}
+
+header {
+    background-color: rgb(42, 193, 188);
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+ul li,
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+/* header - pc */
+header {
+    display: flex;
+}
+
+#nav_logo {
+    line-height: 75px;
+    margin-left: 80px;
+}
+
+#nav_logo a {
+    color: white;
+    font-size: 33px;
+}
+
+#nav_logo a:hover {
+    color: black;
+}
+
+#nav_menu {
+    line-height: 75px;
+    position: absolute;
+    right: 30px;
+    margin-right: 30px;
+
+}
+
+#nav_menu ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#nav_menu ul li {
+    padding-right: 50px;
+    font-size: 23px;
+}
+
+#nav_menu ul li a {
+    color: white;
+}
+
+#nav_menu ul li a:hover {
+    color: black;
+}
+
+
+
+
+/* 주문하기main - pc */
+main {
+    height: 800px;
+}
+
+main #secondHead ul {
+    width: 69%;
+    height: 60px;
+    /* border-bottom: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 0px;
+}
+
+main #secondHead ul a:hover {
+    text-decoration: underline;
+}
+
+main #wrap {
+    /* border: 1px solid black; */
+    width: 69%;
+    height: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main #detail_info {
+    /* border: 1px solid black; */
+    width: 60%;
+    margin-right: 20px;
+}
+
+#detail_info #infoHead {
+    width: 100%;
+    height: 120px;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#infoHead img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-left: 10px
+}
+#infoHead #infoHeadcontent{
+  
+    justify-content: center;
+    margin-left: 10px;
+}
+#infoHeadcontent ul li{
+    font-family: "Noto Sans KR";
+    align-items: center;
+    font-size: 15px;
+}
+
+#infoHeadcontent #dinerName{
+    font-weight: 400;
+    font-size: 20px;
+}
+#infoHeadcontent #dinerName #score{
+    font-size: 30px;
+}
+.fa-star{
+    color: rgb(223, 223, 3);
+    font-size: 16px;
+    -webkit-text-stroke: 1px black;
+
+}
+#tip{
+    color: darkgray;
+}
+#takeout{
+    font-size: 13px;
+    background-color: lightgray;
+    border-radius: 3px;
+    padding: 1px;
+    margin-right: 1px;
+}
+.fa-fire{
+    color: red;
+}
+.menuPic{
+    width: 94px;
+    height: 94px;
+    border: 1px solid rgb(193, 191, 191);
+    border-radius: 10px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+}
+
+
+
+
+#detail_info #infoBody {
+    width: 100%;
+    height: 530px;
+    /* border: 1px solid black; */
+}
+
+#detail_info #infoBody #infoTable {
+    width: 100%;
+    border: 1px solid black;
+    padding: 0px;
+}
+
+#detail_info #infoBody #infoTable #infoTable1 th {
+    /* border-top: 1px solid black; */
+    border-right: 1px solid black;
+    padding: 0px;
+    margin: 0;
+    color: lightgray;
+}
+
+#detail_info #infoBody #infoTable #infoTable1 th:last-child {
+    border: none;
+}
+
+#detail_info #infoBody #infoTable #infoTable1 th button {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    font-family: "배달의민족 한나는 열한살";
+}
+#detail_info #infoBody #menuTable{
+    width: 100%;
+}
+#detail_info #infoBody #menuTable .menu{
+    border: 1px solid black;
+    /* width: 100%; */
+    height: 100px;
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+    padding-left: 16px;
+    position: relative;
+}
+
+
+
+
+
+
+
+main #cart {
+    border: 1px solid black;
+    width: 30%;
+
+}
+
+
+
+
+
+
+
+
+/* footer - pc */
+
+#footer_box {
+    width: 100%;
+    /* height: 200px; */
+    /* border: 1px solid black; */
+    font-family: "Noto Sans KR";
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    color: black;
+    margin-left: 100px;
+
+}
+
+#footer_menu {
+    margin-top: 50px;
+}
+
+#footer_menu li {
+    padding: 5px;
+}
+
+.foothead {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+#footer_rest {
+    margin-top: 50px;
+}
+
+.footmessage {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#footer_rest li {
+    padding: 5px;
+}
+
+#social {
+    margin-top: 30px;
+}
+
+#facebook,
+#instagram {
+    font-size: 40px;
+    margin-left: 3px;
+    margin-bottom: 20px;
+}
+
+#youtube {
+    font-size: 40px;
+    margin-bottom: 20px;
+}

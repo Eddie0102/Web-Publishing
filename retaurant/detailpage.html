@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>음식점 목록</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../retaurant/restcss/detail_style.css">
+    <script defer src="../js/index.js"></script>
+    <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
+    <script src="./restjs/rest.js"></script>
+    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>"
+        defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="nav_logo">
+                <a href="#">배달의 민족</a>
+            </div>
+            <nav id="nav_menu">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li><a href="./food_list.html">주문하기</a></li>
+                    <li><a href="#">주문내역</a></li>
+                    <li><a href="#">my 배민</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="secondHead">
+                <ul>
+                    <li><a href="./subid_list.html">족발/보쌈</a></li>
+                    <li><a href="./kats_list.html">돈까스/회/일식</a></li>
+                    <li><a href="./beef_list.html">고기/구이</a></li>
+                    <li><a href="./pizza_list.html">피자</a></li>
+                    <li><a href="./soup_list.html">찜/탕/찌개</a></li>
+                    <li><a href="./pasta_list.html">양식</a></li>
+                    <li><a href="./china_list.html">중식</a></li>
+                    <li><a href="./asian_list.html">아시안</a></li>
+                    <li><a href="./chicken_list.html">치킨</a></li>
+                    <li><a href="./rice_list.html">백반/죽/국수</a></li>
+                    <li><a href="./fastfood_list.html">패스트푸드</a></li>
+                </ul>
+            </div>
+            <!-- 세컨헤드 아래 -->
+            <div id="wrap">
+                <div id="detail_info">
+                    <div id="infoHead">
+
+                        <img src="./images/chicken2.png" alt="">
+
+                        <div id="infoHeadcontent">
+                            <ul>
+                                <h4 id="dinerName">교촌치킨 신촌점 <i class="fa-regular fa-heart"></i></h4>
+                                <li><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                        class="fa-solid fa-star"></i><span id="score">5.0(100+)</span></li>
+                                <li>최근리뷰 13 | 최근사장님댓글 11 </li>
+                                <li><span id="takeout">세스코멤버스</span></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="infoBody">
+                        <table id="infoTable">
+                            <tr id="infoTable1">
+                                <th><button type="button">메뉴</button></th>
+                                <th><button type="button">정보</button></th>
+                                <th><button type="button">리뷰</button></th>
+
+                            </tr>
+                        </table>
+                        <div id="menuTable">
+                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
+                                <div id="menuName">
+                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
+                                    23,000원
+                                    <br>
+                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                </div>
+                                <img src="./images/menuPic1.jpg" alt="" class="menuPic">
+                            </div>
+                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
+                                <div id="menuName">
+                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
+                                    23,000원
+                                    <br>
+                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                </div>
+                                <img src="./images/menuPic2.jpg" alt="" class="menuPic">
+                            </div>
+                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
+
+                                <div id="menuName">
+                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
+                                    23,000원
+                                    <br>
+                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                </div>
+                                <img src="./images/menuPic3.jpg" alt="" class="menuPic">
+                            </div>
+                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
+                                <div id="menuName">
+                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
+                                    23,000원
+                                    <br>
+                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                </div>
+                                <img src="./images/menuPic4.jpg" alt="" class="menuPic">
+                            </div>
+                            <div class="menu" style="font-family: '맑은고딕'; font-weight: 500;">
+                                <div id="menuName">
+                                    <i class="fa-solid fa-fire" class="fire" style="padding-right: 5px;"></i>허니콤보<br>
+                                    23,000원
+                                    <br>
+                                    달콤한 허니 소스에 쫄깃한 날개와 담백한 다리가 만난 메뉴
+                                </div>
+                                <img src="./images/menuPic1.jpg" alt="" class="menuPic">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div id="cart">
+
+                </div>
+            </div>
+
+
+
+
+
+        </main>
+        <footer>
+            <hr>
+            <div id="footer_box">
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">우아한형제들</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민외식업광장</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_menu">
+                    <li class="foothead"><a href="#">배민커넥트</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                </ul>
+                <ul id="footer_rest">
+                    <li class="footmessage"><a href="#">오늘도 당신에게<br>행복을 배달중</a></li>
+                    <li><a href="#">제휴문의</a></li>
+                    <li><a href="#">개인정보 처리방침</a></li>
+                    <li><a href="#">데이터 제공정책</a></li>
+                    <ul id="social">
+                        <li><a href="https://www.facebook.com/smartbaedal/?locale=ko_KR" id="facebook"><i
+                                    class="fa-brands fa-facebook"></a></i></li>
+                        <li><a href="https://www.instagram.com/baemin_official/?hl=ko" id="instagram"><i
+                                    class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC_q3OgvzbVrHhII7N9Uetfw" id="youtube"><i
+                                    class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </ul>
+            </div>
+
+        </footer>
+    </div>
+</body>
+
+</html>
