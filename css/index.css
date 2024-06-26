@@ -1,6 +1,7 @@
 #fullpage{
     position: relative;
 }
+
 ul li{
     list-style: none;
 }
@@ -20,35 +21,39 @@ section{
 nav{   
     position: relative;
     flex-flow:row nowrap ;
-    margin-top: 70px;
+    /* border: 1px solid #333; */
+}
+
+.navDiv{
+    width: 100%;
+    height: 100px;
+    position: relative;
 }
 nav #logo img{
-    padding:0 170px;
-    margin-top: 20px;
-    margin-left:300px;
+    padding:0 120px;
+    margin-top: 40px;
     object-fit: contain;
     display:flex;
     float:none;
-    width:28%;
-    height:auto;
-    max-width: 142px;
+    max-width: 200px;
 }
 #navbar_list{
- position: absolute;
- right:300px;
- top:20px;
- padding: 0 170px;
+    position: absolute;
+    right: 300px;
+    top: 40px;
 }
 #navbar_list button{
 border:none;
 color:whitesmoke ;
 background-color: #2AC1BC;
+border: 1px solid #eee;
 width:140px;
 height:48px;
 border-radius: 30px;
 cursor:pointer;
 font-size: 17px;
 }
+
 #footerBox_wrap{
     position: relative;
     height: 100vh;
@@ -116,27 +121,45 @@ display:none;
     height:226px;
 }
 
+.section1{
+    width: 100%;
+    height: 800px;
+    /* border: 1px solid #333; */
+    z-index: 98;
+    position: absolute;
+    top : 100px
+}
+.background_text{
+    z-index: 98;
+}
 .background_text img{
     margin:100px;
     width:450px;
     position: absolute;
-    left:200px;
-    bottom:-180px;
+    left:00px;
+    /* bottom:-180px; */
+    
 }
 #navwrap{
-    padding:0 170px;
+    padding:0;
+    position: relative ;
 }
 
 #store_btn{
 position:absolute;
-padding:0 170px;
-bottom:270px;
-left:270px;
+margin: 100px;
+bottom:30px;
+left:0px;
 /* display:flex;
 justify-content: space-between;
 align-items: flex-start;
 margin-top: 40px; */
 }
+
+#store_btn > h4{
+    text-align: center;
+}
+
 .btn{
 background-repeat: no-repeat;
 background-size:140px;
@@ -159,9 +182,12 @@ background-image: url("../images/google.png");
 }
 .qr{
 position: absolute;
-bottom:200px;
-right:400px;
-padding:0 170px;
+bottom:30px;
+right:20px;
+margin: 100px;
+}
+.qr > h4{
+    text-align: center;
 }
 
 html,

@@ -1,4 +1,18 @@
 // login
+// alert("로그인이 필요한 페이지 입니다")
+
+
+// 원하는 출처 URL을 설정합니다.
+const desiredReferrer = "index.html";
+
+// 페이지 로드 시 referrer를 확인하여 조건에 맞는 경우 알림을 띄웁니다.
+window.onload = function() {
+  if (document.referrer.includes(desiredReferrer)) {
+    alert("로그인이 필요한 페이지 입니다.");
+  }
+};
+
+
 
 document.addEventListener("DOMContentLoaded", function() {
     // ID 및 비밀번호 입력 필드를 가져옵니다.
@@ -48,7 +62,8 @@ document.getElementById('login_form').addEventListener('submit', function(event)
     const password = document.getElementById('input_login_pwd').value;
     const storedPassword = localStorage.getItem(username);
     if (password === storedPassword) {
-        alert('로그인 성공!');
+        alert('로그인 성공! 주문 페이지로 이동합니다!');
+        window.location.href = 'food_list.html';
     } else {
         alert('아이디 또는 비밀번호가 일치하지 않습니다.');
     }

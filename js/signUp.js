@@ -62,7 +62,7 @@ document.getElementById('signUp_form').addEventListener('submit', function(event
         } else{
             if(password1 === password2){
                 localStorage.setItem(key, value);
-                alert("회원가입 성공!로그인 페이지로 이동합니다.");
+                alert("회원가입 성공! 로그인 페이지로 이동합니다.");
                 window.location.href = 'login.html';
             }else{
                 alert("비밀번호가 일치하지 않습니다.");

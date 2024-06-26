@@ -5,15 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음식점 목록</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./restcss/dinerList_style.css">
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/headFoot.css">
+    <link rel="stylesheet" href="../css/dinerList_style.css">
+    <script src="../js/rest.js"></script>
     <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
-    <script src="../restjs/rest.js"></script>
-    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>"
-        defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 
@@ -25,28 +20,32 @@
             </div>
             <nav id="nav_menu">
                 <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="./food_list.html">주문하기</a></li>
-                    <li><a href="#">주문내역</a></li>
-                    <li><a href="#">my 배민</a></li>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="food_list.html">주문하기</a></li>
+                    <li><a href="orderlist.html">주문내역</a></li>
+                    <li><a href="login.html">my 배민</a></li>
                 </ul>
             </nav>
         </header>
         <main>
             <div id="secondHead">
-                <ul>
-                    <li><a href="./subid_list.html">족발/보쌈</a></li>
-                    <li><a href="./kats_list.html">돈까스/회/일식</a></li>
-                    <li><a href="./beef_list.html">고기/구이</a></li>
-                    <li><a href="./pizza_list.html">피자</a></li>
-                    <li><a href="./soup_list.html">찜/탕/찌개</a></li>
-                    <li><a href="./pasta_list.html">양식</a></li>
-                    <li><a href="./china_list.html">중식</a></li>
-                    <li><a href="./asian_list.html">아시안</a></li>
-                    <li><a href="./chicken_list.html">치킨</a></li>
-                    <li><a href="./rice_list.html">백반/죽/국수</a></li>
-                    <li><a href="./fastfood_list.html">패스트푸드</a></li>
-                </ul>
+                <div id="menuCarousel">
+                    <ul id="menuList">
+                        <button id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                        <li><a href="./subid_list.html">족발/보쌈</a></li>
+                        <li><a href="./kats_list.html">돈까스/회/일식</a></li>
+                        <li><a href="./beef_list.html">고기/구이</a></li>
+                        <li><a href="./pizza_list.html">피자</a></li>
+                        <li><a href="./soup_list.html">찜/탕/찌개</a></li>
+                        <li><a href="./pasta_list.html">양식</a></li>
+                        <li><a href="./china_list.html">중식</a></li>
+                        <li><a href="./asian_list.html">아시안</a></li>
+                        <li><a href="./chicken_list.html">치킨</a></li>
+                        <li><a href="./rice_list.html">백반/죽/국수</a></li>
+                        <li><a href="./fastfood_list.html">패스트푸드</a></li>
+                        <button id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                    </ul>
+                </div>
             </div>
      
             <div id="dinerList" style="font-family: 고딕;">

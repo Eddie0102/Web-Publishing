@@ -88,12 +88,38 @@ function addToCart(name, price, imageUrl) {
         valDiv.appendChild(decrementButton);
         valDiv.appendChild(quantity);
         valDiv.appendChild(incrementButton);
-
-
         infoDiv.appendChild(deleteButton);
         itemDiv.appendChild(img);
         itemDiv.appendChild(infoDiv);
-
         cartItems.appendChild(itemDiv);
     }
 }
+
+
+// 버튼
+
+document.addEventListener("DOMContentLoaded", function() {
+    const items = document.querySelectorAll("#menuList li");
+    let activeIndex = 0; // Start displaying the first item
+
+    // Initially set the first item as active
+    items[activeIndex].classList.add('active');
+
+    function showItem(index) {
+        items[activeIndex].classList.remove('active');
+        items[index].classList.add('active');
+        activeIndex = index;
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', function() {
+        if (activeIndex > 0) {
+            showItem(activeIndex - 1);
+        }
+    });
+
+    document.getElementById('nextBtn').addEventListener('click', function() {
+        if (activeIndex < items.length - 1) {
+            showItem(activeIndex + 1);
+        }
+    });
+});

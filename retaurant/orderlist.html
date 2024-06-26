@@ -6,148 +6,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>주문내역 페이지</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./restcss/dinerList_style.css">
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/headFoot.css">
     <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
-    <script src="../restjs/rest.js"></script>
-    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <style>
-        * {
+        /* Base styles */
+        main {
             margin: 0;
             padding: 0;
-            font-family: "배달의민족 한나는 열한살";
+            font-family: "배달의민족 한나는 열한살", sans-serif;
+            color: #333; /* Dark grey text for better readability */
+            background: #f0f0f0; /* Light background to reduce eye strain */
         }
-
+    
         main {
-            min-height: 1000px;
+            padding: 60px 10px 20px; /* Added top padding to avoid overlap with fixed header */
         }
-
-        .wrapper>h2 {
-            text-align: center;
-            font-size: 40px;
-            margin: 20px auto;
-        }
-
-        .wrapper>i {
-            display: inline-block;
-            /* float: right; */
-            margin-top: 20px;
-            margin: 20px;
-        }
-
-        .wrapper>p {
-            display: block;
-            margin: 32px 0;
-            font-size: 16px;
-            line-height: 140%;
-            color: #9b9999;
-            text-align: center;
-        }
-
-        .content {
-            width: 1010px;
-            min-height: 650px;
-            /* border: 2px solid black; */
-            margin: 0px auto 20px;
-            position: relative;
-        }
-
-        .total_menu ul li {
-            display: inline-block;
-            width: 30%;
-            height: 40px;
-            margin: 2px;
-            font-size: large;
-            /* border: 2px solid #000000; */
-            font-weight: bolder;
-            margin: 20px 0;
-            margin-left: 120px;
-        }
-
-        .register {
-            border: 1px solid #333;
-            width: 80%;
-            border-collapse: collapse;
-            margin-bottom: 100px;
-            margin-left: 120px;
-        }
-
-        .tableMenu tr th {
-            border: 1px solid #444;
-            border-collapse: collapse;
-            border-right: none;
-            border-left: none;
-            padding: 30px;
-            width: 20%;
-            background-color: #eee;
-        }
-
-        .tablebb tr td {
-            border: 1px solid #444;
-            border-right: none;
-            border-left: none;
-            text-align: center;
-            /* font-family: "아리따움체"; */
-        }
-
-        .section {
-            height: 100px;
-        }
-
-        .tableMenu tr :first-child,
-        .tablebb tr> :first-child {
-            border-right: 1px solid #444;
-        }
-
-        .tableMenu tr {
-            font-size: 25px;
-            font-weight: bold;
-        }
-
-        .tableMenu tr .qa {
-            width: 26%;
-            padding-left: 100px;
-        }
-
-        .name {
-            display: flex;
-            line-height: 100px;
-            padding-left: 20px;
-        }
-
-        .name.name2 {
-            font-size: 1px;
-        }
-
-        .section img {
-            width: 100px;
-            height: 100px;
-            display: flex;
-            float: left;
-            margin: 0px 40px;
-            border-radius: 20px;
-            border: 1px solid #9b9999;
-        }
-
-        .show_more {
-            display: block;
+    
+        .wrapper {
+            max-width: 700px; /* Limiting max-width for better focus on content */
             margin: 0 auto;
-            padding: 10px 20px;
-            font-size: 20px;
-            text-align: center;
-            background-color: #2AC1BC;
-            color: #FFFFFF;
-            border: 2px solid #f7f5f5;
-            border-radius: 20px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 8px; /* Soft rounded corners for a modern look */
         }
-
-        footer {
-            position: relative;
+    
+        .wrapper h2 {
+            color: #2AC1BC; /* Stylish accent color */
+            margin-bottom: 15px;
+        }
+    
+        .wrapper p {
+            color: #666; /* Softer color for less important text */
+            line-height: 1.6;
+        }
+    
+        .total_menu ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background: #e9e9e9; /* Slight contrast for the summary section */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    
+        .total_menu ul li {
+            font-weight: bold;
+            color: #2AC1BC; /* Matching the header color for visual coherence */
+        }
+    
+        .register {
             width: 100%;
-            bottom: 0;
-            margin-top: 200px;
+            border-collapse: collapse; /* Removing cell spacing */
         }
+    
+        .tableMenu {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #ddd;
+        }
+    
+        .tableMenu th {
+            text-align: left;
+            padding: 12px;
+        }
+    
+        .tablebb tr {
+            background: #ffffff; /* White background for rows to stand out */
+            border-bottom: 1px solid #eee;
+        }
+    
+        .tablebb tr:last-child {
+            border-bottom: none;
+        }
+    
+        .tablebb td {
+            padding: 12px;
+            vertical-align: middle; /* Align content to middle for aesthetic balance */
+        }
+    
+        .section img {
+            width: 50px; /* Smaller icons */
+            height: 50px;
+            border-radius: 50%; /* Circular images for a modern look */
+            margin-right: 10px; /* Space between image and text */
+        }
+    
+        .show_more {
+            background-color: #2AC1BC;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer; /* Indicates this element is clickable */
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+    
+        .show_more:hover {
+            background-color: #279a9a; /* Darker shade on hover for feedback */
+        }
+    
+    
+        /* Responsive adjustments for devices up to 767px wide */
+        @media (max-width: 767px) {
+            .wrapper {
+                padding: 15px;
+            }
+    
+            .total_menu ul {
+                flex-direction: column; /* Stack summary items vertically on small screens */
+                text-align: center;
+            }
+        }
+    </style>
+    
+
     </style>
 </head>
 
@@ -159,10 +133,10 @@
             </div>
             <nav id="nav_menu">
                 <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="./food_list.html">주문하기</a></li>
-                    <li><a href="#">주문내역</a></li>
-                    <li><a href="#">my 배민</a></li>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="food_list.html">주문하기</a></li>
+                    <li><a href="orderlist.html">주문내역</a></li>
+                    <li><a href="login.html">my 배민</a></li>
                 </ul>
             </nav>
         </header>
