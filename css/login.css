@@ -239,16 +239,16 @@
     cursor:pointer;
 }
 .icon_sns.icon_kakao{
-    background-image: url("../images/kakaotalkLogo.png");
+    background-image: url("../retaurant/images/kakaotalkLogo.png");
 }
 .icon_sns.icon_naver{
-    background-image: url("../images/naverLogo.png");
+    background-image: url("../retaurant/images/naverLogo.png");
 }
 .icon_sns.icon_facebook{
-    background-image: url("../images/facebookLogo.png");
+    background-image: url("../retaurant/images/facebookLogo.png");
 }
 .icon_sns.icon_apple{
-    background-image: url("../images/appleLogo.png");
+    background-image: url("../retaurant/images/appleLogo.png");
 }
 
 #signUp_idPwd>li{

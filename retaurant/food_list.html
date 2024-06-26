@@ -5,14 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>음식점 목록</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./restcss/foodList_style.css">
-    <script defer src="../js/index.js"></script>
+    <link rel="stylesheet" href="../css/foodList_style.css">
+    <link rel="stylesheet" href="../css/headFoot.css">
+    <script src="../js/rest.js"></script>
     <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
-    <script src="./restjs/rest.js"></script>
-    <script type="text/javascript" src="<https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j>" defer></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 </head>
 
@@ -24,10 +21,10 @@
             </div>
             <nav id="nav_menu">
                 <ul>
-                    <li><a href="#">홈</a></li>
-                    <li><a href="./food_list.html">주문하기</a></li>
-                    <li><a href="#">주문내역</a></li>
-                    <li><a href="#">my 배민</a></li>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="food_list.html">주문하기</a></li>
+                    <li><a href="orderlist.html">주문내역</a></li>
+                    <li><a href="login.html">my 배민</a></li>
                 </ul>
             </nav>
         </header>
@@ -39,12 +36,16 @@
                 
             </div> -->
             <div id="mainBox">
-               
-
                 <div id="delivery">
                     <h2>가게배달<img src="./images/baedalicon.jpg" alt="배달"></h2>
                     <ul>
-                        <li><div class="category"><a href="#"><img src="./images/forone.jpg" alt=""></a></div></li>
+                        <li>
+                            <div class="category">
+                                <a href="./subid_list.html">
+                                    <img src="./images/forone.jpg" alt="">
+                                </a>
+                            </div>
+                        </li>
                         <li><div class="category"><a href="./subid_list.html"><img src="./images/subid.jpg" alt=""></a></div></li>
                         <li><div class="category"><a href="./kats_list.html"><img src="./images/kats.jpg" alt=""></a></div></li>
                         <li><div class="category"><a href="./beef_list.html"><img src="./images/beef.jpg" alt=""></a></div></li>
@@ -56,32 +57,32 @@
                         <li><div class="category"><a href="./china_list.html"><img src="./images/china.jpg" alt=""></a></div></li>
                     </ul>
                     <ul>
-                        <li><div class="category"><a href="#"><img src="./images/asian.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/chicken.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/rice.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/fastfood.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="asian_list.html"><img src="./images/asian.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="chicken_list.html"><img src="./images/chicken.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="rice_list.html"><img src="./images/rice.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="fastfood_list.html"><img src="./images/fastfood.jpg" alt=""></a></div></li>
                     </ul>
 
                 </div>
                 <div id="pickup">
                     <h2>포장하기</h2>
                     <ul>
-                        <li><div class="category"><a href="#"><img src="./images/night.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/subid.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/kats.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/beef.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="subid_list.html"><img src="./images/night.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="subid_list.html"><img src="./images/subid.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="kats_list.html"><img src="./images/kats.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="beef_list.html"><img src="./images/beef.jpg" alt=""></a></div></li>
                     </ul>
                     <ul>
-                        <li><div class="category"><a href="#"><img src="./images/cafe.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/soup.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/pasta.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/china.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="soup_list.html"><img src="./images/cafe.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="soup_list.html"><img src="./images/soup.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="pasta_list.html"><img src="./images/pasta.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="china_list.html"><img src="./images/china.jpg" alt=""></a></div></li>
                     </ul>
                     <ul>
-                        <li><div class="category"><a href="#"><img src="./images/asian.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/chicken.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/pizza.jpg" alt=""></a></div></li>
-                        <li><div class="category"><a href="#"><img src="./images/fastfood.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="asian_list.html"><img src="./images/asian.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="chicken_list.html"><img src="./images/chicken.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="pasta_list.html"><img src="./images/pizza.jpg" alt=""></a></div></li>
+                        <li><div class="category"><a href="fastfood_list.html"><img src="./images/fastfood.jpg" alt=""></a></div></li>
                     </ul>
 
                 </div>
