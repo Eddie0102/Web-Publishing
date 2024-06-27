@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/detail_style.css">
     <script src="../js/rest.js"></script>
     <script src="https://kit.fontawesome.com/d44f71ab07.js" crossorigin="anonymous"></script>
+    <script src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=f0xdy69n2j"></script>
 </head>
 
 <body>
@@ -95,6 +96,10 @@
                     <div id="cartItems"></div>
                 </div>
             </div>
+            <div id="mapsName" style="width: 69%; height: 50px;text-align: center; margin: 0 auto;">
+                <h2>[ 위치 ]</h2>
+            </div>
+            <div id="map" style="width:69%;height:600px; border: 3px solid darkgray; border-radius: 10px; margin: 0 auto;"></div>
         </main>
         <footer>
             <hr>
@@ -135,6 +140,52 @@
 
         </footer>
     </div>
+    <script>
+        var HOME_PATH = window.HOME_PATH || '.';
+        
+        var gyochon = new naver.maps.LatLng(37.558101, 126.937678),
+            map = new naver.maps.Map('map', {
+                center: gyochon.destinationPoint(0, 500),
+                zoom: 15
+            });
+        
+     
+        var marker = new naver.maps.Marker({
+            map: map,
+            position: gyochon,
+            icon: {
+                url: HOME_PATH + '/marker.png',  
+                size: new naver.maps.Size(50, 50),  
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(25, 25)  
+            }
+        });
+        // 변경된 부분 끝
+        
+        var contentString = [
+                '<div class="iw_inner">',
+                '   <h3><i class="fa-solid fa-drumstick-bite"></i>교촌치킨 신촌점</h3>',
+                '   <p>서울특별시 서대문구 명물길 21 | 신촌역 3번출구에서 307m<br />',
+                '       치킨, 닭강정 | 일반 음식점, 주류<br />',
+                '       <a href="https://www.kyochon.com/main/" target="_blank">https://www.kyochon.com/main/</a>',
+                '   </p>',
+                '</div>'
+            ].join('');
+        
+        var infowindow = new naver.maps.InfoWindow({
+            content: contentString
+        });
+        
+        naver.maps.Event.addListener(marker, "click", function(e) {
+            if (infowindow.getMap()) {
+                infowindow.close();
+            } else {
+                infowindow.open(map, marker);
+            }
+        });
+        
+        infowindow.open(map, marker);
+        </script>
 </body>
 
 </html>

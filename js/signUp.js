@@ -1,7 +1,7 @@
 // signUp 
 
 document.addEventListener("DOMContentLoaded", function() {
-    // ID 및 비밀번호 입력 필드를 가져옵니다.
+   
     let signUpIdInput = document.getElementById("input_signUp_id");
     let signUpPwdInput1 = document.getElementById("input_signUp_pwd1");
     let signUpPwdInput2 = document.getElementById("input_signUp_pwd2");
